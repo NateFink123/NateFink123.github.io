@@ -152,49 +152,40 @@ const images = [
   'assets/images/ezgif-frame-150.jpg'
 ];
 
-// Set the total number of images from the array
-const totalImages = images.length; 
-
 let currentIndex = 0; // Starting index
 
-// Get the image element, navigation textboxes, and frame number display
+// Get the image element and the navigation textboxes
 const photoElement = document.getElementById('photo');
 const backwardTextbox = document.getElementById('backward');
 const forwardTextbox = document.getElementById('forward');
-const frameNumberElement = document.getElementById('frameNumber');
 
-// Function to update the photo and frame number displayed
+// Function to update the photo displayed
 function updatePhoto() {
-  // Set the source of the image using the predefined image array
+  // Set the source of the image to the current photo in the array
   photoElement.src = images[currentIndex];
-
-  // Update the frame number display
-  frameNumberElement.textContent = `Frame ${String(currentIndex + 1).padStart(3, '0')}`;
 }
 
 // Event listener for clicking the "Backward" textbox
 backwardTextbox.addEventListener('click', () => {
   // Move to the previous image in the array
-  currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+  currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
   updatePhoto();
 });
 
 // Event listener for clicking the "Forward" textbox
 forwardTextbox.addEventListener('click', () => {
   // Move to the next image in the array
-  currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+  currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
   updatePhoto();
 });
 
 // Event listener for keyboard navigation (left and right arrow keys)
 document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowLeft') {
-    // Move to the previous image
-    currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
     updatePhoto();
   } else if (event.key === 'ArrowRight') {
-    // Move to the next image
-    currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
     updatePhoto();
   }
 });
@@ -227,4 +218,6 @@ function startTimer() {
 }
 
 // Start the timer when the page loads
+startTimer();
+
 startTimer();
