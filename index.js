@@ -1,11 +1,10 @@
 // Array of image filenames with the new paths
 const images = [
-    'ezgif-frame-001.jpg',
-    'file:///D:/downloads%20real/ezgif-4-72df588de3-jpg/ezgif-frame-002.jpg',
-    'file:///D:/downloads%20real/ezgif-4-72df588de3-jpg/ezgif-frame-003.jpg',
-    'file:///D:/downloads%20real/ezgif-4-72df588de3-jpg/ezgif-frame-004.jpg',
+    'assets/images/ezgif-frame-001.jpg',
+    'assets/images/ezgif-frame-002.jpg',
+    'assets/images/ezgif-frame-003.jpg',
+    'assets/images/ezgif-frame-004.jpg',
     // Add more photo filenames as needed
-    'file:///D:/downloads%20real/ezgif-4-72df588de3-jpg/ezgif-frame-150.jpg'
   ];
   
   let currentIndex = 0; // Starting index
