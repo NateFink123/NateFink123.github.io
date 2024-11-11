@@ -38,15 +38,14 @@
             text-transform: lowercase; /* Makes all text lowercase */
         }
 
-        /* The image container: making it smaller and centered */
+        /* The image container: 4:3 aspect ratio and moved up */
         #photo-container {
-            width: 50vw; /* Adjusted to 50% of the screen width */
-            height: 50vw; /* Same as width for a square aspect ratio */
+            width: 60vw; /* 60% of the screen width */
+            height: 45vw; /* 45% of the screen width for a 4:3 aspect ratio */
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
-            border: 5px solid red; /* border around the image box */
+            margin-top: 20px; /* Moves the container up from the bottom */
             position: relative;
         }
 
@@ -64,21 +63,20 @@
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 10px;
+            gap: 20px;
         }
 
         .nav-buttons div {
-            padding: 10px 20px;
-            background-color: rgba(255, 0, 0, 0.7);
+            font-size: 1.5rem;
             color: white;
             font-weight: bold;
             cursor: pointer;
-            border-radius: 5px;
             text-transform: lowercase; /* Makes the button text lowercase */
+            padding: 10px;
         }
 
         .nav-buttons div:hover {
-            background-color: rgba(255, 0, 0, 1);
+            opacity: 0.7; /* Slightly dim the buttons on hover */
         }
 
     </style>
