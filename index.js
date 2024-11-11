@@ -1,10 +1,19 @@
-// Array of image filenames with relative paths to the "assets/images" folder
-const images = [
-  'assets/images/ezgif-frame-001.jpg',
-  'assets/images/ezgif-frame-002.jpg',
-  'assets/images/ezgif-frame-003.jpg',
-  'assets/images/ezgif-frame-004.jpg',
-  'assets/images/ezgif-frame-005.jpg'
+// Start at image 1000 and increment dynamically, with a max of 2000
+let currentIndex = 1000; // Starting index
+const maxIndex = 2000; // Maximum index value
+
+// Get the image element and the navigation textboxes
+const photoElement = document.getElementById('photo');
+const backwardTextbox = document.getElementById('backward');
+const forwardTextbox = document.getElementById('forward');
+const timerElement = document.getElementById('timer');
+
+// Function to update the photo displayed
+function updatePhoto() {
+  // Set the source of the image to the dynamically generated image filename
+  photoElement.src = `assets/backgrounds/${currentIndex}.jpg`;
+}
+
 ];
 
 let currentIndex = 0; // Starting index
