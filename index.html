@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=.9">
-    <title>photo viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Viewer with Timer</title>
     <style>
-        /* Basic styling for centering the content */
         body {
             margin: 0;
             padding: 0;
@@ -14,92 +13,72 @@
             align-items: center;
             flex-direction: column;
             height: 100vh;
-            background-color: black;
+            background-color: #333;
             color: white;
             font-family: 'Times New Roman', serif;
             text-align: center;
-            overflow: hidden;
         }
 
-        /* Title Text Styling */
-        #title {
-            font-size: 3rem;
-            font-weight: bold;
-            color: white;
-            margin-top: 20px;
-            text-transform: lowercase; /* Makes all text lowercase */
-        }
-
-        /* Timer Styling */
-        #timer {
-            font-size: 2rem;
-            color: white;
-            margin-top: 10px;
-            text-transform: lowercase; /* Makes all text lowercase */
-        }
-
-        /* The image container: 4:3 aspect ratio and moved up */
         #photo-container {
-            width: 40vw; /* 60% of the screen width */
-            height: 30vw; /* 45% of the screen width for a 4:3 aspect ratio */
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px; /* Moves the container up from the bottom */
-            position: relative;
+            width: 60vw;
+            height: 45vw;
+            margin-top: 30px;
+            border: 2px solid white;
+            background-color: black;
         }
 
-        /* Image Styling to make it cover the box */
         #photo {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures image covers the box without distortion */
+            object-fit: cover;
         }
 
-        /* Navigation controls at the bottom center */
         .nav-buttons {
             position: fixed;
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 20px;
+            gap: 30px;
         }
 
         .nav-buttons div {
             font-size: 1.5rem;
-            color: white;
             font-weight: bold;
             cursor: pointer;
-            text-transform: lowercase; /* Makes the button text lowercase */
+            text-transform: lowercase;
+            color: white;
             padding: 10px;
+            border: none;
+            background: none;
         }
 
         .nav-buttons div:hover {
-            opacity: 0.7; /* Slightly dim the buttons on hover */
+            opacity: 0.7;
         }
 
+        #timer {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <!-- Title Text -->
-    <div id="title">get to the end</div>
-
-    <!-- Timer Display -->
-    <div id="timer">01:00</div>
-
-    <!-- Photo Container -->
     <div id="photo-container">
         <img id="photo" src="" alt="photo viewer">
     </div>
 
-    <!-- Navigation Buttons -->
+    <div id="timer"></div>
+
     <div class="nav-buttons">
         <div id="backward">backward</div>
         <div id="forward">forward</div>
     </div>
 
-    <!-- Reference to the JavaScript file -->
     <script src="index.js"></script>
 </body>
 </html>
