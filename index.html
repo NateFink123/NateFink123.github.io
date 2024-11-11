@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Viewer</title>
+    <title>photo viewer</title>
     <style>
         /* Basic styling for centering the content */
         body {
@@ -12,34 +12,57 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             background-color: black;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', serif;
             text-align: center;
+            overflow: hidden;
         }
 
-        /* The image should fill the entire screen */
-        #photo {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
+        /* Title Text Styling */
+        #title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            margin-top: 20px;
+            text-transform: lowercase; /* Makes all text lowercase */
         }
 
-        /* Timer styling */
+        /* Timer Styling */
         #timer {
-            position: fixed;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
             font-size: 2rem;
+            color: white;
+            margin-top: 10px;
+            text-transform: lowercase; /* Makes all text lowercase */
         }
 
-        /* Navigation buttons at the bottom */
+        /* The image container: making it square and centered */
+        #photo-container {
+            width: 80vw; /* 80% of the screen width */
+            height: 80vw; /* same as width for a square aspect ratio */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border: 5px solid red; /* border around the image box */
+            position: relative;
+        }
+
+        /* Image Styling to make it cover the box */
+        #photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the box without distortion */
+        }
+
+        /* Navigation controls at the bottom center */
         .nav-buttons {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             gap: 10px;
         }
@@ -51,38 +74,31 @@
             font-weight: bold;
             cursor: pointer;
             border-radius: 5px;
+            text-transform: lowercase; /* Makes the button text lowercase */
         }
 
         .nav-buttons div:hover {
             background-color: rgba(255, 0, 0, 1);
         }
 
-        /* Title text at the top */
-        #title {
-            position: fixed;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 3rem;
-            font-weight: bold;
-            color: red;
-        }
     </style>
 </head>
 <body>
     <!-- Title Text -->
-    <div id="title">Get to the End</div>
-
-    <!-- Photo display area -->
-    <img id="photo" src="" alt="Photo Viewer">
+    <div id="title">get to the end</div>
 
     <!-- Timer Display -->
     <div id="timer">01:00</div>
 
-    <!-- Navigation buttons -->
+    <!-- Photo Container -->
+    <div id="photo-container">
+        <img id="photo" src="" alt="photo viewer">
+    </div>
+
+    <!-- Navigation Buttons -->
     <div class="nav-buttons">
-        <div id="backward">Backward</div>
-        <div id="forward">Forward</div>
+        <div id="backward">backward</div>
+        <div id="forward">forward</div>
     </div>
 
     <!-- Reference to the JavaScript file -->
