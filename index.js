@@ -1,6 +1,6 @@
 // Array of image filenames with the new paths
 const images = [
-    'https://drive.google.com/file/d/11kFYfN8mBe2hwOm9KTcpiZq2w_G9KRIT/view?usp=sharing',
+    'ezgif-frame-001.jpg',
     'file:///D:/downloads%20real/ezgif-4-72df588de3-jpg/ezgif-frame-002.jpg',
     'file:///D:/downloads%20real/ezgif-4-72df588de3-jpg/ezgif-frame-003.jpg',
     'file:///D:/downloads%20real/ezgif-4-72df588de3-jpg/ezgif-frame-004.jpg',
