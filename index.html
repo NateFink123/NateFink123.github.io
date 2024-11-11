@@ -13,20 +13,26 @@
             align-items: center;
             flex-direction: column;
             height: 100vh;
-            background-color: #333;
+            background-color: black; /* Set background to black */
             color: white;
             font-family: 'Times New Roman', serif;
             text-align: center;
+        }
+
+        #header {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: lowercase;
+            margin-top: 20px;
         }
 
         #photo-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 50vw;
-            height: 30vw;
+            width: 60vw;
+            height: 45vw;
             margin-top: 30px;
-            border: 2px solid white;
             background-color: black;
         }
 
@@ -68,18 +74,24 @@
     </style>
 </head>
 <body>
+    <!-- Header Text -->
+    <div id="header">get to the end</div>
+
+    <!-- Photo Container -->
     <div id="photo-container">
         <img id="photo" src="" alt="photo viewer">
     </div>
 
+    <!-- Timer -->
     <div id="timer"></div>
 
+    <!-- Navigation Buttons -->
     <div class="nav-buttons">
         <div id="backward">backward</div>
         <div id="forward">forward</div>
     </div>
 
+    <!-- JavaScript -->
     <script src="index.js"></script>
 </body>
 </html>
-
